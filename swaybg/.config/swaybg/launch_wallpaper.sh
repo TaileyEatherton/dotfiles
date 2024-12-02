@@ -2,4 +2,6 @@
 
 #swaybg --image ~/dotfiles/misc_files/wallpapers/ign_endeavour2.png
 
-swaybg --image ~/Downloads/wallpaper_background/wp6139725-black-and-white-aesthetic-laptop-wallpapers.jpg
+#swaybg --image ~/Downloads/wallpaper_background/wp6139725-black-and-white-aesthetic-laptop-wallpapers.jpg
+
+swaybg --image ~/dotfiles/misc_files/wallpapers/tailey_wallpapers/wp6139725-black-and-white-aesthetic-laptop-wallpapers.jpg
