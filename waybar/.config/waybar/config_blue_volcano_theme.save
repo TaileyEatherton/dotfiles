@@ -1,0 +1,133 @@
+{
+    "layer": "top",
+//    "margin-top": 10,
+//    "margin-left": 10,
+//    "margin-right": 10,
+
+    "modules-left":  ["clock","cpu", "memory", "disk", "temperature"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["bluetooth","backlight", "pulseaudio", "network", "battery"],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+	"format": "{icon}",
+	"format-icons": {
+                "active": "\udb82\udcc7",
+		"1": "1",
+		"2": "2",
+		"3": "3",
+		"4": "4",
+		"5": "5",
+	},
+       "persistent-workspaces": {
+         "*": [ 1, 2, 3, 4, 5 ]
+       }
+    },
+
+    "hyprland/window": {
+        "max-length": 30
+    },
+
+    "network": {
+        "format-wifi" : "{icon} {signalStrength}%",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-ethernet": "  ETH",
+        "format-disconnected" : "󰖪 disconnected",
+        "tooltip-format-wifi": "{ipaddr}/{cidr} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr} {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 5,
+        "nospacing": 1,
+        "on-click": "alacritty -e nmtui"
+    },
+//    "network": {
+//        // "interface": "wlp2*", // (Optional) To force the use of this interface
+//        "format-wifi": "{essid} ({signalStrength}%) ",
+//        "format-ethernet": "{ipaddr}/{cidr} ",
+//        "tooltip-format": "{ifname} via {gwaddr} ",
+//        "format-linked": "{ifname} (No IP) ",
+//        "format-disconnected": "Disconnected ⚠",
+//        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+//    },
+
+//    "network": {
+//        "format": "{ifname}",
+//        "format-wifi": "{essid} ({signalStrength}%) ",
+//        "format-ethernet": "ETHERNET",
+//        "format-disconnected": "", //An empty format will hide the module.
+//        "tooltip-format": "{ifname} via {gwaddr}",
+//        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+//        "tooltip-format-ethernet": "{ifname} ",
+//        "tooltip-format-disconnected": "Disconnected",
+//        "max-length": 50
+//    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰",
+        "nospacing": 1,
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "default": ["","", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 2
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%b %d | %H:%M | %Y}",  // 24-hour time between month and year
+	"tooltip-format": "{:%A, %B %d, %Y - %H:%M:%S}",  // Tooltip format when you hover
+        "interval": 1
+   },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "scroll-step": 1
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false,
+        "on-click": "alacritty -e htop"
+    },
+    "memory": {
+        "format": " {}%",
+	"tooltip-format": "{used} GiB / {total} GiB",
+	"interval": 5,
+	"on-click": "alacritty -e htop"
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+	"tooltip-format": "{used} / {total}\nfree: {free}",
+        "path": "/",
+	"on-click": "alacritty --hold -e fastfetch"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [""],
+        "on-click": "alacritty -e htop"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-connected": "",
+        "format-disabled": "",
+        //"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "alacritty -e bluetui"
+    },
+
+}

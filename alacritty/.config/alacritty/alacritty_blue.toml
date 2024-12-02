@@ -1,0 +1,16 @@
+[colors]
+  [colors.primary]
+    background = "#000000"  # Black background
+    foreground = "#c0c0c0"  # Light Gray
+
+  [colors.normal]
+    black   = "#000000"  # Black (matches background)
+    red     = "#12b2ae"  # Bright Red turned to dark red
+    green   = "#054a78"  # Medium Gray to dark red
+    yellow  = "#a39f9f"  # Light Gray
+    blue    = "#7f7f7f"  # Medium Gray
+    magenta = "#2b959f"  # Bright Red
+    cyan    = "#7f7f7f"  # Medium Gray
+    white   = "#e0e0e0"  # Very Light Gray
+    #199c1f bright green
+    #081457 dark blue

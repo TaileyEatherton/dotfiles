@@ -1,0 +1,60 @@
+
+
+[window]
+opacity =0.8
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window.padding]
+x = 10
+y = 10
+
+# Alacritty Black, Red, and Gray Theme Configuration
+
+[colors]
+  [colors.primary]
+    background = "#000000"  # Black background
+    foreground = "#c0c0c0"  # Light Gray
+
+  [colors.normal]
+    black   = "#000000"  # Black (matches background)
+    red     = "#900808"  # Bright Red turned to dark red
+    green   = "#900808"  # Medium Gray to dark red
+    yellow  = "#a39f9f"  # Light Gray
+    blue    = "#7f7f7f"  # Medium Gray
+    magenta = "#bc1818"  # Bright Red
+    cyan    = "#7f7f7f"  # Medium Gray
+    white   = "#e0e0e0"  # Very Light Gray
+    #199c1f bright green
+    #081457 dark blue
+  [colors.bright]
+    black   = "#555555"  # Dark Gray
+    red     = "#ff7f7f"  # Lighter Red
+    green   = "#b0b0b0"  # Lighter Gray
+    yellow  = "#d3d3d3"  # Brighter Gray
+    blue    = "#b0b0b0"  # Lighter Gray
+    magenta = "#ff7f7f"  # Lighter Red (to match)
+    cyan    = "#b0b0b0"  # Lighter Gray
+    white   = "#ffffff"  # White
+
+
+
+[colors.cursor]
+#text = "0x7f85a3"
+cursor = "#bc1818" 
+
+[general]
+
+### themes from https://github.com/alacritty/alacritty-theme.git
+import = [
+    "~/.config/alacritty/themes/themes/nord2.toml"
+]
+
+#[colors.primary]
+#background = "#0d0c0c"
+#foreground = "#5a8f12"
+

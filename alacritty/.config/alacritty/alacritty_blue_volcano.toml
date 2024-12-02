@@ -1,0 +1,40 @@
+### themes from https://github.com/alacritty/alacritty-theme.git
+import = [
+    "~/.config/alacritty/themes/themes/oceanic_next.toml"
+]
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window.padding]
+x = 15
+y = 15
+
+[window]
+decorations = "None"
+opacity = 0.8
+
+[colors.normal]
+black = '#1d485f' #Dark Blue
+red = '#db662d'#Dark Orange
+#green = '#50b325' Bright Green
+green = '#008eab' #Bright Blue
+yellow = '#f5e232' #Bright Yellow
+blue = '#c69026' #Orange
+#magenta = '#77dbf4' #light white blue
+magenta = '#1bc285' #Light green-images
+cyan = '#15668e' #Dark Blue-comments
+white = '#eee8e4'
+#white = '#50b325'
+[colors.bright]
+#black = '#50b325'
+#red     = '#5faf5f'
+#green   = '#afd700'
+#yellow  = '#af87d7'
+#blue    = '#ffaf00'
+magenta = '#ffaf00' #orange
+cyan = '#00afaf' #pretty bright blue
+white   = '#5f8787'
